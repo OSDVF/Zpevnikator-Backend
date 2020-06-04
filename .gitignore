@@ -1,0 +1,8 @@
+# Firemní tajemství
+shared/loadDB.php
+shared/*_key.pem
+usrContent/
+
+# Tajemství jiných firem
+shared/convertio
+wordpress-stubs.php

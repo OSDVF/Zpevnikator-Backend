@@ -1,0 +1,17 @@
+name: FTP Deploy
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: 126701.w1.wedos.net
+        FTP_USERNAME: w126701_api
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
