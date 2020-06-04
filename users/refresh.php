@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * @brief
  * Functionality for getting Zpěvníkátor Together data about one particular user's songs and groups
  */
 function refreshUserData(&$resultObj,$id)

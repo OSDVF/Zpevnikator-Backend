@@ -2,7 +2,9 @@
 shared/loadDB.php
 shared/*_key.pem
 usrContent/
+icon.png
 
 # Tajemství jiných firem
 shared/convertio
 wordpress-stubs.php
+docs/

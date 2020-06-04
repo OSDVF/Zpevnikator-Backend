@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * @brief
  * Include this when you want to work with wordpress API
  */
 define('WP_USE_THEMES', false);

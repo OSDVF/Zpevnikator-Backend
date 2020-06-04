@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Called by Convertio on conversion status update
+ * @brief Called by Convertio on conversion status update
  */
   require_once '../shared/convertio/0.4/autoload.php';
   require_once '../notifications/send.php';

@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * @brief
  * Respond to user query for a song
  */
 if (!function_exists('getallheaders')) {

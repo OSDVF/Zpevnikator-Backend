@@ -1,7 +1,10 @@
 <?php
 /**
- * @file 
+ * @file
+ * @brief
  * Simple HTML DOM parser library
+ * 
+ * @note Do not refer to this documentation page, use these instead:
  * Website: http://sourceforge.net/projects/simplehtmldom/
  * Additional projects: http://sourceforge.net/projects/debugobject/
  * Acknowledge: Jose Solorzano (https://sourceforge.net/projects/php-html/)

@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * @brief
  * Mirrors content of a song by its URL in this domain to another (our) domain :)
  */
 if(!$_GET||!$_GET['id'])

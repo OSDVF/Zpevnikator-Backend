@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * @brief
  * API for sending push messages to subscribed clients
  * Depends on https://github.com/web-push-libs/web-push-php
  */

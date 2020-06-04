@@ -1,6 +1,8 @@
 <?php
 /**
- * @file API for conversion between ChordPro and HTML
+ * @file
+ * @brief
+ * API for conversion between ChordPro and HTML
  */
 
 require_once '../shared/simple_html_dom.php';

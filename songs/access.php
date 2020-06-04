@@ -1,7 +1,10 @@
 <?php
 /**
  * @file
+ * @brief
  * API for accessing one particular song's content
+ * 
+ * @note
  * Does not require authentification
  */
 require_once '../shared/loadWordpress.php';

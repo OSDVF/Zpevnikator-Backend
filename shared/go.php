@@ -1,6 +1,8 @@
 <?php
 /**
- * @file Handles redirection of user to Wordpress admin page for song editing
+ * @file
+ * @brief
+ * Handles redirection of user to Wordpress admin page for song editing
  */
 require_once 'loadWordpress.php';
 

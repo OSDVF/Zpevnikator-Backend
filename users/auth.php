@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * @brief
  * Functionality for authenticating users by wordpress API
  */
 /**

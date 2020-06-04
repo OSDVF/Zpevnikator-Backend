@@ -1,7 +1,10 @@
 <?php
 /**
  * @file
+ * @brief
  * Adds a song to the database
+ * 
+ * @note
  * Requires user authentification
  */
 require 'songParser.php';

@@ -1,6 +1,7 @@
 <?
 /**
  * @file
+ * @brief
  * Simple Like button press counting system
  */
 $path = 'usrContent';

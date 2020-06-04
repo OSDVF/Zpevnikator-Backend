@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * @brief
  * Functionality for generating Zpěvníkátor-wide user authentication hashes and their checking
  */
 

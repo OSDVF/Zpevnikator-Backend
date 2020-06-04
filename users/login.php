@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * @brief
  * Responds to a login request and send all user-created data in the repsonse
  */
 error_reporting(E_ERROR | E_PARSE);

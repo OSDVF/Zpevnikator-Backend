@@ -1,10 +1,11 @@
 <?php
 
 /**
- * @file Contains code for listing publicly-available songs
+ * @file
+ * @brief Contains code for listing publicly-available songs
  */
 require_once "song.php";
-//require_once "../shared/loadWordpress.php";
+require_once "../shared/loadWordpress.php";
 
 function ListSongs($formatted, $authorID)
 {

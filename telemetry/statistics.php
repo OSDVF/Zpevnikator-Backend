@@ -1,6 +1,7 @@
 <?php
 /**
  * @file
+ * @brief
  * Saves everything that comes to it
  */
 $file = "data.txt";
