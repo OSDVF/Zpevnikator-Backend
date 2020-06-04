@@ -4,6 +4,7 @@ shared/*_key.pem
 usrContent/
 icon.png
 upload.ps1
+convert/access.php
 
 # Tajemství jiných firem
 shared/convertio

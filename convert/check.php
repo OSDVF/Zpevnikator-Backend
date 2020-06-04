@@ -10,14 +10,14 @@ if(!$_GET||!$_GET['id'])
     die();//Yes, commit suicide. So soon?
 }
 $ConvertID = $_GET['id'];
-require_once '../shared/convertio/0.4/autoload.php';
 
-use \Convertio\Convertio;
+$baseUrl = $_SERVER['SERVER_NAME'];
+require_once 'access.php';
 use \Convertio\Exceptions\APIException;
 use \Convertio\Exceptions\CURLException;
-$baseUrl = $_SERVER['SERVER_NAME'];
+
 try {
-    $API = new Convertio('8c6ba18f01b0e557be62d44c83fb8c57');
+    $API = getConvertioAPIObj();
     $API->__set('convert_id', $ConvertID);
     $API->status();
     switch($API->step)
@@ -68,4 +68,3 @@ try {
     http_response_code(500);
     echo "Jiná zajímavá chyba: Miscellaneous Exception occurred: " . $e->getMessage() . "\n";
 }
-?>
