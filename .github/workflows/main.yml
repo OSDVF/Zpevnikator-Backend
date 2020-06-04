@@ -1,4 +1,4 @@
-name: FTP Deploy
+name: Deploy
 
 on: [push]
 
@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
-      env:
-        FTP_SERVER: 126701.w1.wedos.net
-        FTP_USERNAME: w126701_api
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ftp://126701.w1.wedos.net/subdom/api/
+        ftp-username: w126701_api
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
