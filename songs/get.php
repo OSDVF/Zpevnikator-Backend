@@ -35,7 +35,7 @@ if(substr($song_id,0,6)=='_draft')
 }
 else
     $chordpro = GetSong('name',$song_id);
-$dospaces = !($_GET['nospace'] &&$_GET['nospace'] =='true');
+$dospaces = ($_GET['format'] &&$_GET['format'] =='true');
 
 if(substr($song_id,0,8)=='offline:')
 {
@@ -121,7 +121,7 @@ for($p=0;$p<count($paragraphs);$p++)
                 $nextChordLength = strlen($chordOutput[1][$i+1][0]);
                 $adjacentChordsLength = $thisChordLength+$nextChordLength;
                 $lyricAfter = substr($lines[$l],$chordEndPos, $nextChordPos - $chordEndPos);
-                $lastPos = $chordEndPos +strlen($line);
+                $lastPos = $chordEndPos;
                 if($nextChordPos === NULL)
                 {
                     $lyricAfter = substr($lines[$l],$lastPos);

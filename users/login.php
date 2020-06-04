@@ -15,12 +15,12 @@ if ($_POST) {
         require_once("encrypt.php");
         $userCredenc = encryptCredentials($username, $password);
         $resultObj->status = "OK";
-        $resultObj->data = $userCredenc;
-        $resultObj->id = $userData;
+        $resultObj->credentials = $userCredenc;
+        $resultObj->id = $userData->ID;
 
         //Add Zpěvníkátor data
         require 'refresh.php';
-        refreshUserData($resultObj);
+        refreshUserData($resultObj,$userData->ID);
     } else {
         $resultObj->status = "FAIL";
     }

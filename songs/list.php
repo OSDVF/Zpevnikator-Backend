@@ -34,7 +34,7 @@ function ListSongs($formatted, $authorID)
 			if (empty($song_id))
 				$song_id = "_draft$postId";
 			if (!$formatted)
-				$nextSong->url = "$song_id&nospace=true";
+				$nextSong->url = "$song_id&format=true";
 			else
 				$nextSong->url = $song_id;
 			$nextSong->name = $title;
@@ -74,7 +74,7 @@ function ListSongs($formatted, $authorID)
 		$song_id = $p->post_name;
 		$nextSong = new Song();
 		if (!$formatted)
-			$nextSong->url = "$song_id&nospace=true";
+			$nextSong->url = "$song_id&format=true";
 		else
 			$nextSong->url = $song_id;
 		$nextSong->name = $title;
@@ -102,4 +102,4 @@ function ListAsJSON($formatted)
 }
 //Do this as a default action when displaying this page
 if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) == pathinfo(__FILE__, PATHINFO_FILENAME)) //If this is the file which was directly requested
-	echo ListAsJSON($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['formatted']) && $_GET['formatted'] == true);
+	echo ListAsJSON($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['format']) && $_GET['format'] == true);

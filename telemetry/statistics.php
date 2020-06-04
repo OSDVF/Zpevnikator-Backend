@@ -7,7 +7,7 @@
 $file = "data.txt";
 if($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $path = 'usrContent/'.date('Y').'/'.date('W');
+    $path = '../usrContent/'.date('Y').'/'.date('W');
     if (!file_exists($path)) {
         mkdir($path, 0777, true);
     }

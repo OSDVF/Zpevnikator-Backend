@@ -4,6 +4,19 @@
  * @brief
  * Functionality for getting Zpěvníkátor Together data about one particular user's songs and groups
  */
+/**
+ * @class User
+ * @param songs
+ * @param groups
+ * @param playlists
+ * @param notes
+ * @param credentials
+ * @param id
+ * @param status Status of the request. OK if success, FAIL if failed
+ */
+/**
+ * @param[in,out] User $resultObj: An User object to bind data to
+ */
 function refreshUserData(&$resultObj,$id)
 {
     require '../groups/list.php';

@@ -3,6 +3,7 @@ shared/loadDB.php
 shared/*_key.pem
 usrContent/
 icon.png
+upload.ps1
 
 # Tajemství jiných firem
 shared/convertio
