@@ -11,8 +11,6 @@ function ListSongs($formatted, $authorID)
 {
 	$songurls = array();
 	if (isset($authorID)) {
-		$usr = get_user_by('id', $authorID);
-
 		$privateQuery = new WP_Query(array(
 			'post_type' => 'song',
 			'post_status' => array('publish', 'pending', 'draft', 'future', 'private'),
@@ -33,7 +31,7 @@ function ListSongs($formatted, $authorID)
 			$postId = $p->ID;
 			if (empty($song_id))
 				$song_id = "_draft$postId";
-			if (!$formatted)
+			if ($formatted)
 				$nextSong->url = "$song_id&format=true";
 			else
 				$nextSong->url = $song_id;
@@ -73,7 +71,7 @@ function ListSongs($formatted, $authorID)
 		$nextSong = new Song();
 		$song_id = $p->post_name;
 		$nextSong = new Song();
-		if (!$formatted)
+		if ($formatted)
 			$nextSong->url = "$song_id&format=true";
 		else
 			$nextSong->url = $song_id;
