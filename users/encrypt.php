@@ -22,6 +22,10 @@ function encryptCredentials($username, $password)
     return base64_encode($encrypted);
 }
 
+/**
+ * Decrypts a user credentials hash. This can be done only on the server side
+ * @return Number|object -1 On failure, or an object with user data on success
+ */
 function decryptCredentials($encryptedText)
 {
     $encryptedText = base64_decode($encryptedText);
