@@ -19,7 +19,7 @@ function refreshUserData(&$resultObj, $id)
     require '../songs/list.php';
     $resultObj->songs = ListSongs(false, $id);
     $resultObj->groups = ListGroups($id);
-    $resultObj->playlists = ListPlaylists($id);
+    $resultObj->playlists = ListPlaylists($id); 
     $resultObj->notes = ListNotes($id);
 }
 
@@ -37,7 +37,7 @@ if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) == pathinfo(__FILE__, PATH
 
     if (decryptCredentials($_POST['credentials']) != -1) {
         //If authentication is valid
-        refreshUserData($resultObj, $_GET['id']);
+        refreshUserData($resultObj, $_POST['id']);
         $resultObj->status = 'OK';
     }
 
