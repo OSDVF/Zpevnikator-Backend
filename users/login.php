@@ -27,9 +27,9 @@ if ($_POST) {
 
         $userInfo->credentials = $userCredenc;
         $userInfo->id = $userData->ID;
-        $userInfo->name = $userData->user_nicename;
+        $userInfo->fullName = $userData->user_nicename;
         $userInfo->avatar = get_avatar_url($userInfo->id);
-        $userInfo->username = $username;
+        $userInfo->name = $username;
 
         $resultObj->userInfo = $userInfo;
 
