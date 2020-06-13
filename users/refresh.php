@@ -5,10 +5,11 @@
  * @brief
  * Functionality for getting Zpěvníkátor Together data about one particular user's songs and groups  
  * 
- * Do a GET request to that file for retrieving all of the user's data. Returns a User object as JSON
+ * @returns TogetherAPIResponse as JSON when doing a POST request to that file.
  */
 /**
  * @param[in,out] User $resultObj: An User object to bind data to
+ * @param[in] int $id
  */
 function refreshUserData(&$resultObj, $id)
 {
@@ -28,6 +29,9 @@ if (pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME) == pathinfo(__FILE__, PATH
 
     if (!($_POST && isset($_POST['id']) && isset($_POST['credentials'])))
         return;
+    /**
+     * @var TogetherAPIResponse $resultObj
+     */
     $resultObj = new stdClass();
     $resultObj->status = 'FAIL';
 

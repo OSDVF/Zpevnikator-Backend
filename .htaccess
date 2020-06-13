@@ -1,0 +1,13 @@
+#SetEnvIf Origin ^(https?://.+\.dorostmladez\.cz(?::\d{1,5})?)$   CORS_ALLOW_ORIGIN=$1
+#Header append Access-Control-Allow-Origin  %{CORS_ALLOW_ORIGIN}e   env=CORS_ALLOW_ORIGIN
+
+#debug:
+Header append Access-Control-Allow-Origin *
+
+Header merge  Vary "Origin"
+Header merge Access-Control-Allow-Headers Cache-Control
+
+<Files ~ "\.pem$">
+  Order allow,deny
+  Deny from all
+</Files>
